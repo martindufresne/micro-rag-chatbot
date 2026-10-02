@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "categorie": "Horaires & Contact",
+    "question": "Quels sont vos horaires d'ouverture et d'assistance ?",
+    "reponse": "Notre équipe de support client est joignable du lundi au vendredi de 9h00 à 18h30 (heure de Paris). En dehors de ces plages, vous pouvez nous écrire par email."
+  },
+  {
+    "id": 2,
+    "categorie": "Horaires & Contact",
+    "question": "Comment puis-je contacter le service client humain ?",
+    "reponse": "Vous pouvez nous joindre par email à l'adresse support@technova-shop.fr ou par téléphone au 01 89 54 20 00 pendant nos heures d'ouverture."
+  },
+  {
+    "id": 3,
+    "categorie": "Livraison",
+    "question": "Quels sont les délais et tarifs de livraison ?",
+    "reponse": "La livraison standard (France métropolitaine) prend entre 48h et 72h ouvrées et coûte 4,90 €. Elle est gratuite pour toute commande supérieure à 50 €. La livraison express (24h) est disponible à 9,90 €."
+  },
+  {
+    "id": 4,
+    "categorie": "Livraison",
+    "question": "Livrez-vous à l'étranger ou dans les DOM-TOM ?",
+    "reponse": "Oui, nous livrons en Belgique, en Suisse et au Luxembourg (délais de 3 à 5 jours ouvrés, tarif fixe de 7,50 €). Nous ne livrons malheureusement pas encore dans les DOM-TOM."
+  },
+  {
+    "id": 5,
+    "categorie": "Retours & Remboursements",
+    "question": "Quelle est votre politique de retour et sous quel délai ?",
+    "reponse": "Vous disposez d'un délai légal de 14 jours calendaires à compter de la réception de votre colis pour changer d'avis. Le produit doit être intact, complet et dans son emballage d'origine."
+  },
+  {
+    "id": 6,
+    "categorie": "Retours & Remboursements",
+    "question": "Les frais de retour sont-ils gratuits ?",
+    "reponse": "Les retours sont 100% gratuits en cas de produit défectueux ou d'erreur de notre part (une étiquette prépayée vous est fournie). Pour un simple changement d'avis, les frais de renvoi restent à la charge du client."
+  },
+  {
+    "id": 7,
+    "categorie": "Paiement & Sécurité",
+    "question": "Quels sont les modes de paiement acceptés sur le site ?",
+    "reponse": "Nous acceptons les cartes bancaires (Visa, Mastercard, Carte Bleue), Apple Pay, Google Pay et PayPal. Les paiements en plusieurs fois (3x sans frais dès 100 € d'achat) sont possibles via Alma."
+  },
+  {
+    "id": 8,
+    "categorie": "Garantie & SAV",
+    "question": "Quelle garantie s'applique sur les produits vendus ?",
+    "reponse": "Tous nos appareils électroniques bénéficient de la garantie légale de conformité de 2 ans. En cas de panne matérielle avérée, nous procédons à la réparation ou au remplacement à neuf."
+  },
+  {
+    "id": 9,
+    "categorie": "Boutique & Retrait",
+    "question": "Avez-vous une boutique physique ou un point de retrait ?",
+    "reponse": "Oui ! Notre showroom et atelier se situent au 15 rue des Développeurs, 75011 Paris. Vous pouvez y retirer vos commandes 'Click & Collect' sous 2 heures après confirmation."
+  }
+]

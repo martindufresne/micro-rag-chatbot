@@ -1,0 +1,16 @@
+# Dépendances Node.js
+node_modules/
+
+# Variables d'environnement sensibles (NE JAMAIS COMMITER DE CLÉ D'API)
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Système et IDE
+.DS_Store
+.vscode/
+.idea/
