@@ -122,8 +122,8 @@ Ouvrez ensuite votre navigateur à l'adresse : **[http://localhost:3000](http://
 ## 🧪 Comment tester le Chatbot
 
 1. **Test de factualité (Succès RAG) :**
-   * Question : *"Quels sont vos délais de livraison en France ?"*
-   * Résultat attendu : Le bot cite fidèlement la règle des 48h-72h et la gratuité dès 50 €.
+   * Question : *"Quels sont vos délais et frais de livraison au Québec ?"*
+   * Résultat attendu : Le bot cite fidèlement la règle des 2 à 4 jours ouvrables avec Postes Canada et la gratuité dès 60 $ d'achat avant taxes.
 2. **Test de repli / Anti-hallucination (Fallback) :**
    * Question : *"Vendez-vous des vélos électriques ?"*
    * Résultat attendu : Le produit n'étant pas dans `data/faq.json`, le bot indique poliment qu'il n'a pas l'information et redirige vers le support humain.

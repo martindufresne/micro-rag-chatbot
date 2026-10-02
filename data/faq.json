@@ -3,54 +3,60 @@
     "id": 1,
     "categorie": "Horaires & Contact",
     "question": "Quels sont vos horaires d'ouverture et d'assistance ?",
-    "reponse": "Notre équipe de support client est joignable du lundi au vendredi de 9h00 à 18h30 (heure de Paris). En dehors de ces plages, vous pouvez nous écrire par email."
+    "reponse": "Notre équipe de soutien à la clientèle est disponible du lundi au vendredi de 9h00 à 17h00 (heure normale de l'Est / Montréal). En dehors de ces heures, vous pouvez nous écrire par courriel en tout temps."
   },
   {
     "id": 2,
     "categorie": "Horaires & Contact",
-    "question": "Comment puis-je contacter le service client humain ?",
-    "reponse": "Vous pouvez nous joindre par email à l'adresse support@technova-shop.fr ou par téléphone au 01 89 54 20 00 pendant nos heures d'ouverture."
+    "question": "Comment puis-je contacter le service à la clientèle humain ?",
+    "reponse": "Vous pouvez nous joindre par courriel à support@technova-shop.ca ou par téléphone au (514) 895-2000 (sans frais au 1 800 555-0199) pendant nos heures d'ouverture."
   },
   {
     "id": 3,
-    "categorie": "Livraison",
-    "question": "Quels sont les délais et tarifs de livraison ?",
-    "reponse": "La livraison standard (France métropolitaine) prend entre 48h et 72h ouvrées et coûte 4,90 €. Elle est gratuite pour toute commande supérieure à 50 €. La livraison express (24h) est disponible à 9,90 €."
+    "categorie": "Taxes & Prix",
+    "question": "Les prix affichés incluent-ils les taxes (TPS et TVQ) ?",
+    "reponse": "Tous nos prix sont affichés en dollars canadiens ($ CA) avant taxes. Pour les résidents du Québec, la TPS (5 %) et la TVQ (9,975 %) sont calculées et ajoutées automatiquement lors de l'étape de paiement à la caisse."
   },
   {
     "id": 4,
     "categorie": "Livraison",
-    "question": "Livrez-vous à l'étranger ou dans les DOM-TOM ?",
-    "reponse": "Oui, nous livrons en Belgique, en Suisse et au Luxembourg (délais de 3 à 5 jours ouvrés, tarif fixe de 7,50 €). Nous ne livrons malheureusement pas encore dans les DOM-TOM."
+    "question": "Quels sont les délais et tarifs de livraison au Québec et au Canada ?",
+    "reponse": "La livraison standard avec Postes Canada ou Purolator prend entre 2 et 4 jours ouvrables au Québec et en Ontario (tarif fixe de 6,99 $). Elle est 100 % GRATUITE pour toute commande de 60 $ ou plus (avant taxes). La livraison express (24-48h) est offerte à 12,99 $."
   },
   {
     "id": 5,
-    "categorie": "Retours & Remboursements",
-    "question": "Quelle est votre politique de retour et sous quel délai ?",
-    "reponse": "Vous disposez d'un délai légal de 14 jours calendaires à compter de la réception de votre colis pour changer d'avis. Le produit doit être intact, complet et dans son emballage d'origine."
+    "categorie": "Livraison",
+    "question": "Livrez-vous à l'extérieur du Québec ou aux États-Unis ?",
+    "reponse": "Oui, nous livrons partout au Canada (délais de 3 à 6 jours ouvrables selon la province) ainsi qu'aux États-Unis (délais de 5 à 8 jours ouvrables, frais fixes de 14,99 $ CA). Les douanes et taxes locales peuvent s'appliquer hors Canada."
   },
   {
     "id": 6,
     "categorie": "Retours & Remboursements",
-    "question": "Les frais de retour sont-ils gratuits ?",
-    "reponse": "Les retours sont 100% gratuits en cas de produit défectueux ou d'erreur de notre part (une étiquette prépayée vous est fournie). Pour un simple changement d'avis, les frais de renvoi restent à la charge du client."
+    "question": "Quelle est votre politique de retour et sous quel délai ?",
+    "reponse": "Vous disposez d'un délai de 30 jours civils suivant la réception de votre colis pour demander un retour. L'article doit être dans son état d'origine, non utilisé, avec toutes les étiquettes et son emballage d'origine."
   },
   {
     "id": 7,
-    "categorie": "Paiement & Sécurité",
-    "question": "Quels sont les modes de paiement acceptés sur le site ?",
-    "reponse": "Nous acceptons les cartes bancaires (Visa, Mastercard, Carte Bleue), Apple Pay, Google Pay et PayPal. Les paiements en plusieurs fois (3x sans frais dès 100 € d'achat) sont possibles via Alma."
+    "categorie": "Retours & Remboursements",
+    "question": "Les frais de retour sont-ils gratuits ?",
+    "reponse": "Les retours sont sans frais si le produit reçu est défectueux ou si nous avons commis une erreur (nous vous fournissons une étiquette d'expédition prépayée de Postes Canada). Pour un simple changement d'avis, des frais de retour postaux de 5 $ sont déduits du remboursement."
   },
   {
     "id": 8,
-    "categorie": "Garantie & SAV",
-    "question": "Quelle garantie s'applique sur les produits vendus ?",
-    "reponse": "Tous nos appareils électroniques bénéficient de la garantie légale de conformité de 2 ans. En cas de panne matérielle avérée, nous procédons à la réparation ou au remplacement à neuf."
+    "categorie": "Paiement & Sécurité",
+    "question": "Quels sont les modes de paiement acceptés sur le site ?",
+    "reponse": "Nous acceptons les cartes de crédit (Visa, Mastercard, American Express), Débit Interac en ligne, Apple Pay, Google Pay et PayPal. Nous offrons aussi le paiement en 4 versements sans intérêt avec Sezzle pour les achats de 50 $ et plus."
   },
   {
     "id": 9,
-    "categorie": "Boutique & Retrait",
-    "question": "Avez-vous une boutique physique ou un point de retrait ?",
-    "reponse": "Oui ! Notre showroom et atelier se situent au 15 rue des Développeurs, 75011 Paris. Vous pouvez y retirer vos commandes 'Click & Collect' sous 2 heures après confirmation."
+    "categorie": "Garantie & Réparation",
+    "question": "Quelle garantie s'applique sur les produits achetés ?",
+    "reponse": "Tous nos produits électroniques sont couverts par la garantie légale québécoise sur la qualité et la durabilité, ainsi que par une garantie fabricant d'un an pièces et main-d'œuvre. En cas de défectuosité, nous réparons ou remplaçons l'appareil sans frais."
+  },
+  {
+    "id": 10,
+    "categorie": "Boutique & Cueillette",
+    "question": "Avez-vous une boutique physique ou un point de cueillette ?",
+    "reponse": "Oui ! Notre succursale et comptoir de cueillette sont situés au 1250, rue Sainte-Catherine Ouest, à Montréal (Québec) H3G 1P1, près du métro Peel. Vous pouvez y récupérer votre commande gratuitement en magasin 2 heures après votre achat."
   }
 ]
