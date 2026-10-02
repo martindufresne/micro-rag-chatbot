@@ -14,3 +14,7 @@ yarn-error.log*
 .DS_Store
 .vscode/
 .idea/
+
+# Documents réservés à l'enseignant (corrigés, barèmes, notes privées)
+docs/Notes-de-cours-Enseignant.*
+

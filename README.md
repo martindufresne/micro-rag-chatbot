@@ -65,7 +65,6 @@ micro-rag-chatbot/
 │   ├── style.css         # Styles CSS du site et du chatbot flottant
 │   └── app.js            # Logique frontend (DOM, fetch, markdown, historique)
 └── docs/
-    ├── Notes-de-cours-Enseignant.pdf   # Guide pédagogique complet pour l'enseignant
     └── Cahier-du-Participant.pdf       # Guide pratique de synthèse pour l'étudiant
 ```
 
