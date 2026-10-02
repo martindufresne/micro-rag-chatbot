@@ -300,19 +300,26 @@
 
   <h2>1.3 La solution : Le RAG (Retrieval-Augmented Generation)</h2>
   <div class="alert alert-success">
-    <strong>L'analogie de l'examen :</strong><br>
-    • Sans RAG = Un examen à livre fermé. Le modèle récite de mémoire et fait des erreurs.<br>
-    • Avec RAG = Un examen à livre ouvert. On fournit au modèle le document exact (votre <code>faq.json</code>), et on lui ordonne de ne répondre qu'à partir de ce document.
+    <strong>L'analogie de l'examen à livre ouvert :</strong><br>
+    • Sans RAG = Un examen à livre fermé. Le modèle récite de mémoire et risque d'halluciner.<br>
+    • Avec RAG = Un examen à livre ouvert. On fournit au modèle le contenu complet du site web (<code>site-content.json</code> : catalogue, services, histoire, FAQ), et on lui ordonne de ne répondre <strong>qu'à partir de ce document officiel</strong>.
   </div>
 
   <h2>1.4 Les 3 rôles d'un échange avec un LLM</h2>
   <ul>
-    <li><strong>System (Instructions système) :</strong> Le "cerveau" et les consignes invisibles du bot (son nom, ses règles, ses limites de sécurité et la FAQ injectée).</li>
+    <li><strong>System (Instructions système) :</strong> Le "cerveau" et les consignes invisibles du bot (son nom, ses règles strictes, ses limites et la documentation du site injectée).</li>
     <li><strong>User (Utilisateur) :</strong> La question posée par l'internaute dans le chat.</li>
-    <li><strong>Model / Assistant (Réponse) :</strong> La réponse générée par l'IA renvoyée à l'internaute.</li>
+    <li><strong>Model / Assistant (Réponse) :</strong> La réponse factuelle générée par l'IA renvoyée à l'internaute.</li>
   </ul>
 
-  <h2>1.5 Pourquoi un serveur Node.js est OBLIGATOIRE ?</h2>
+  <h2>1.5 Que se passe-t-il si la question n'est PAS dans le RAG ?</h2>
+  <div class="alert alert-info">
+    <strong>Le comportement de repli (Fallback) :</strong><br>
+    Si un internaute pose une question dont la réponse n'existe nulle part dans le site (ex: <em>"Vendez-vous des guitares ?"</em> ou <em>"Donne-moi la météo à Québec"</em>) :<br>
+    Grâce à notre règle de sécurité numéro 2, <strong>le bot refuse d'inventer</strong> et répond poliment avec une phrase de repli officielle (ex: <em>"Je n'ai pas cette information, contactez notre équipe à support@technova-shop.ca"</em>). C'est le secret d'un chatbot fiable en entreprise !
+  </div>
+
+  <h2>1.6 Pourquoi un serveur Node.js est OBLIGATOIRE ?</h2>
   <div class="alert alert-warning">
     <strong>Règle d'or de sécurité du Web :</strong> Tout ce qui est dans le navigateur (fichiers <code>.html</code> et <code>.js</code>) est <strong>public</strong>. Si vous écrivez votre clé d'API directement dans le navigateur, n'importe qui peut ouvrir les outils de développement (F12) et voler votre clé. Le serveur Node.js joue le rôle d'un <strong>garde du corps</strong> : il conserve la clé cachée et ne communique au client que le texte final.
   </div>

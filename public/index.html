@@ -22,10 +22,11 @@
         <span class="logo-text">TechNova<strong>Shop</strong></span>
       </div>
       <nav class="nav-links">
-        <a href="#produits">Produits</a>
-        <a href="#engagements">Nos engagements</a>
-        <a href="#faq">FAQ du site</a>
-        <a href="#contact" class="btn-primary-sm">Contact</a>
+        <a href="index.html" class="active">Accueil</a>
+        <a href="produits.html">Produits</a>
+        <a href="services.html">Services & Atelier</a>
+        <a href="a-propos.html">À Propos</a>
+        <a href="contact.html" class="btn-primary-sm">Contact</a>
       </nav>
     </div>
   </header>
@@ -70,7 +71,7 @@
                 <strong>Backend :</strong> Node.js & Express (Proxy API sécurisé)
               </li>
               <li>
-                <strong>Données RAG :</strong> <code>data/faq.json</code> injecté dans le System Prompt
+                <strong>Données RAG :</strong> <code>data/site-content.json</code> (Toutes les pages du site : Produits, Services, À Propos, Contact, FAQ)
               </li>
               <li>
                 <strong>Moteur IA :</strong> Gemini 2.5 Flash via <em>Google AI Studio</em> (100% gratuit)
@@ -78,6 +79,45 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- SECTION EXPLORATION DES PAGES DU SITE -->
+    <section class="container" style="margin-bottom: 60px;">
+      <div class="section-title">
+        <h2>Explorez l'ensemble du site web</h2>
+        <p>Le chatbot est capable de répondre avec précision sur le contenu de chacune de ces pages !</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+        
+        <div class="faq-card" style="text-align: center;">
+          <span style="font-size: 2rem;">💻</span>
+          <h3 style="margin: 10px 0 6px;">Catalogue Produits</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px;">Portables reconditionnés, moniteurs 4K, claviers mécaniques bilingues.</p>
+          <a href="produits.html" class="btn-primary-sm" style="display: inline-block;">Voir les produits</a>
+        </div>
+
+        <div class="faq-card" style="text-align: center;">
+          <span style="font-size: 2rem;">🔧</span>
+          <h3 style="margin: 10px 0 6px;">Services & Atelier</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px;">Diagnostics 100% gratuits, réparation d'écrans, nettoyage thermique.</p>
+          <a href="services.html" class="btn-primary-sm" style="display: inline-block;">Voir les services</a>
+        </div>
+
+        <div class="faq-card" style="text-align: center;">
+          <span style="font-size: 2rem;">🌱</span>
+          <h3 style="margin: 10px 0 6px;">À Propos</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px;">Entreprise fondée à Montréal par des étudiants, mission écoresponsable.</p>
+          <a href="a-propos.html" class="btn-primary-sm" style="display: inline-block;">Notre histoire</a>
+        </div>
+
+        <div class="faq-card" style="text-align: center;">
+          <span style="font-size: 2rem;">📍</span>
+          <h3 style="margin: 10px 0 6px;">Succursale & Contact</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 14px;">Rue Sainte-Catherine à Montréal, accès métro Peel, heures d'ouverture.</p>
+          <a href="contact.html" class="btn-primary-sm" style="display: inline-block;">Nous joindre</a>
+        </div>
+
       </div>
     </section>
 

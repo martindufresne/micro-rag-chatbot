@@ -67,28 +67,110 @@ app.use(express.static(path.join(__dirname, 'public'))); // Sert les fichiers HT
 // ----------------------------------------------------------------------------
 
 /**
- * Charge le fichier data/faq.json et le transforme en texte structuré
- * prêt à être injecté dans les instructions système du modèle.
+ * Charge le fichier data/site-content.json (ou data/faq.json) et le transforme en texte
+ * structuré prêt à être injecté dans les instructions système du modèle.
  * 
- * @returns {Promise<string>} Le texte formaté de la base de connaissances
+ * Cela permet au Chatbot d'avoir accès à L'ENSEMBLE du contenu du site web :
+ * - Page Accueil & Promotions
+ * - Catalogue Produits (fiches techniques, prix en $ CA)
+ * - Services d'Atelier & Réparations (tarifs)
+ * - Page À Propos (fondateurs, valeurs, équipe à Montréal)
+ * - Coordonnées & Accès
+ * - FAQ & Politiques (taxes TPS/TVQ, retours, livraisons)
+ * 
+ * @returns {Promise<string>} Le texte formaté de l'ensemble du site web
  */
 async function loadKnowledgeBase() {
   try {
-    const faqPath = path.join(__dirname, 'data', 'faq.json');
-    const rawData = await fs.readFile(faqPath, 'utf-8');
-    const faqList = JSON.parse(rawData);
+    const siteContentPath = path.join(__dirname, 'data', 'site-content.json');
+    const rawData = await fs.readFile(siteContentPath, 'utf-8');
+    const siteData = JSON.parse(rawData);
 
-    // Transformation du tableau d'objets en texte clair
-    const formattedFaq = faqList.map((item, index) => {
-      return `[Article #${item.id || index + 1} - Catégorie: ${item.categorie || 'Général'}]\n` +
-             `Question : ${item.question}\n` +
-             `Réponse officielle : ${item.reponse}`;
-    }).join('\n\n');
+    let doc = `=== INFORMATIONS GÉNÉRALES DU SITE WEB ===\n`;
+    if (siteData.site) {
+      doc += `Nom : ${siteData.site.nom}\n`;
+      doc += `Description : ${siteData.site.description}\n`;
+      doc += `Adresse physique : ${siteData.site.adresse} (${siteData.site.metro})\n`;
+      doc += `Téléphone : ${siteData.site.telephone} (sans frais : ${siteData.site.sans_frais})\n`;
+      doc += `Courriel de soutien : ${siteData.site.courriel}\n`;
+      doc += `Heures d'ouverture : ${siteData.site.heures_ouverture}\n\n`;
+    }
 
-    return formattedFaq;
+    if (Array.isArray(siteData.pages)) {
+      doc += `=== CONTENU DÉTAILLÉ DE TOUTES LES PAGES DU SITE ===\n\n`;
+      for (const page of siteData.pages) {
+        doc += `--- PAGE : ${page.titre} (URL : ${page.url}) ---\n`;
+        doc += `Description : ${page.description}\n`;
+
+        // Sections
+        if (page.sections) {
+          page.sections.forEach(sec => {
+            doc += `* ${sec.titre} : ${sec.details}\n`;
+          });
+        }
+
+        // Articles / Produits
+        if (page.articles) {
+          doc += `Catalogue des produits disponibles :\n`;
+          page.articles.forEach(art => {
+            doc += `  - [Produit] ${art.nom} (${art.categorie}) : ${art.prix}\n`;
+            doc += `    État : ${art.etat}\n`;
+            doc += `    Spécifications techniques : ${art.specs}\n`;
+            doc += `    Garantie : ${art.garantie}\n`;
+          });
+        }
+
+        // Services d'atelier
+        if (page.services) {
+          doc += `Services d'atelier et réparations proposés :\n`;
+          page.services.forEach(srv => {
+            doc += `  - [Service] ${srv.nom} | Tarif : ${srv.tarif} | Délai : ${srv.delai}\n`;
+            doc += `    Détails : ${srv.details}\n`;
+          });
+        }
+
+        // À propos
+        if (page.contenu) {
+          if (typeof page.contenu === 'object') {
+            doc += `Historique & Mission : ${page.contenu.fondation || ''} ${page.contenu.mission || ''}\n`;
+            doc += `Équipe & Réalisations : ${page.contenu.equipe || ''} ${page.contenu.statistiques || ''}\n`;
+          } else {
+            doc += `${page.contenu}\n`;
+          }
+        }
+
+        // Contact
+        if (page.details) {
+          Object.entries(page.details).forEach(([key, val]) => {
+            doc += `* ${key.replace(/_/g, ' ')} : ${val}\n`;
+          });
+        }
+
+        doc += `\n`;
+      }
+    }
+
+    // FAQ & Politiques
+    if (Array.isArray(siteData.faq_et_politiques)) {
+      doc += `=== FOIRE AUX QUESTIONS & POLITIQUES OFFICIELLES (TAXES, LIVRAISONS, RETOURS) ===\n\n`;
+      siteData.faq_et_politiques.forEach((item, index) => {
+        doc += `[Question #${index + 1} - Sujet: ${item.sujet}]\n`;
+        doc += `Q : ${item.question}\n`;
+        doc += `R : ${item.reponse}\n\n`;
+      });
+    }
+
+    return doc;
   } catch (error) {
-    console.error('❌ Erreur lors de la lecture du fichier data/faq.json :', error.message);
-    return 'Aucune documentation disponible actuellement.';
+    console.warn('⚠️  Impossible de charger data/site-content.json, repli sur data/faq.json :', error.message);
+    try {
+      const faqPath = path.join(__dirname, 'data', 'faq.json');
+      const rawData = await fs.readFile(faqPath, 'utf-8');
+      const faqList = JSON.parse(rawData);
+      return faqList.map((item, index) => `[Article #${index + 1}] ${item.question} -> ${item.reponse}`).join('\n\n');
+    } catch (fallbackError) {
+      return 'Aucune documentation disponible actuellement.';
+    }
   }
 }
 
@@ -209,7 +291,7 @@ app.post('/api/chat', async (req, res) => {
 });
 
 // ----------------------------------------------------------------------------
-// 5. Route utilitaire : GET /api/faq (permet aux étudiants de voir la base)
+// 5. Routes utilitaires : Visualiser le contenu injecté dans le RAG
 // ----------------------------------------------------------------------------
 app.get('/api/faq', async (req, res) => {
   try {
@@ -218,6 +300,16 @@ app.get('/api/faq', async (req, res) => {
     res.json(JSON.parse(rawData));
   } catch (error) {
     res.status(500).json({ error: 'Impossible de lire la FAQ.' });
+  }
+});
+
+app.get('/api/site-content', async (req, res) => {
+  try {
+    const contentPath = path.join(__dirname, 'data', 'site-content.json');
+    const rawData = await fs.readFile(contentPath, 'utf-8');
+    res.json(JSON.parse(rawData));
+  } catch (error) {
+    res.status(500).json({ error: 'Impossible de lire le contenu complet du site.' });
   }
 });
 

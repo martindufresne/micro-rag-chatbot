@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À Propos de Nous • TechNova Shop (Montréal)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- EN-TÊTE -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">TechNova<strong>Shop</strong></span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Produits</a>
+        <a href="services.html">Services & Atelier</a>
+        <a href="a-propos.html" class="active">À Propos</a>
+        <a href="contact.html" class="btn-primary-sm">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- EN-TÊTE DE PAGE -->
+  <div class="page-header">
+    <div class="container">
+      <span class="badge-tag">Entreprise Locale & Écoresponsable</span>
+      <h1>Notre Histoire & Nos Engagements</h1>
+      <p>TechNova réinvente l'informatique à Montréal en luttant contre l'obsolescence programmée et en rendant la technologie accessible aux étudiants québécois.</p>
+    </div>
+  </div>
+
+  <!-- CONTENU À PROPOS -->
+  <main class="container">
+    
+    <div class="about-grid">
+      <div>
+        <h2>Fondée par des étudiants d'ici</h2>
+        <p style="margin-top: 14px;">
+          TechNova a vu le jour en <strong>2021 à Montréal</strong> sous l'impulsion de <strong>Martin et Sophie</strong>, deux diplômés en informatique du <strong>Collège de Maisonneuve</strong> et de l'<strong>UQAM</strong>. Témoins du gaspillage d'équipements récents dans les entreprises montréalaises alors que leurs collègues étudiants peinaient à se payer des ordinateurs performants, ils ont décidé d'agir.
+        </p>
+        <p style="margin-top: 12px;">
+          Aujourd'hui, TechNova compte une équipe de <strong>8 techniciens certifiés et conseillers passionnés</strong> travaillant dans notre atelier du centre-ville sur la rue Sainte-Catherine.
+        </p>
+      </div>
+
+      <div class="hero-card" style="padding: 24px;">
+        <h3 style="color: var(--primary-color); margin-bottom: 12px;">Nos 3 Piliers Fondamentaux</h3>
+        <ul class="archi-list">
+          <li><strong>Économie circulaire :</strong> Rien ne se perd, tout se reconditionne ou se recycle de façon sécurisée au Québec.</li>
+          <li><strong>Transparence totale :</strong> Diagnostics gratuits, prix affichés en dollars canadiens et fiches techniques certifiées.</li>
+          <li><strong>Soutien à la relève :</strong> Rabais de 10% permanent pour les cégeps et universités pour faciliter l'apprentissage du numérique.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STATISTIQUES CLÉS -->
+    <div class="stats-grid">
+      <div class="stat-box">
+        <span class="stat-number">4 200+</span>
+        <span class="stat-label">Ordinateurs reconditionnés avec soin</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">12 tonnes</span>
+        <span class="stat-label">Déchets électroniques détournés au Québec</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-number">98 %</span>
+        <span class="stat-label">Taux de satisfaction de notre clientèle</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 TechNova Solutions • Projet pédagogique Développeur Web (Québec).</p>
+      <p>Modèle : Google Gemini Flash • Gratuit & sans carte de crédit.</p>
+    </div>
+  </footer>
+
+  <!-- WIDGET DU CHATBOT -->
+  <aside id="chatWidget" class="chat-widget" aria-label="Assistant d'assistance virtuelle">
+    <button id="chatToggleBtn" class="chat-toggle-btn" aria-label="Ouvrir le chat d'assistance" title="Besoin d'aide ?">
+      <span class="icon-open">💬</span>
+      <span class="icon-close">✕</span>
+      <span class="notification-badge" id="chatBadge">1</span>
+    </button>
+    <div id="chatWindow" class="chat-window closed" role="dialog" aria-modal="false">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="avatar-wrap">
+            <span class="avatar-icon">🤖</span>
+            <span class="status-indicator online"></span>
+          </div>
+          <div>
+            <h3>NovaBot</h3>
+            <span class="chat-subtitle">Assistant officiel TechNova</span>
+          </div>
+        </div>
+        <button id="chatCloseBtn" class="chat-close-btn">✕</button>
+      </div>
+      <div id="chatMessages" class="chat-messages" role="log">
+        <div class="message bot">
+          <div class="message-bubble">
+            Bonjour ! 👋 Vous aimeriez en savoir plus sur l'histoire de TechNova ou notre équipe à Montréal ? Posez-moi vos questions !
+          </div>
+          <span class="message-time">À l'instant</span>
+        </div>
+      </div>
+      <div class="quick-questions" id="quickQuestions">
+        <span class="quick-title">Questions fréquentes histoire :</span>
+        <div class="chips-container">
+          <button class="chip-btn" data-question="Qui a fondé l'entreprise TechNova et quand ?">👥 Qui a fondé TechNova ?</button>
+          <button class="chip-btn" data-question="Quelle est la mission écologique de TechNova ?">🌱 Mission écoresponsable</button>
+          <button class="chip-btn" data-question="Combien d'ordinateurs avez-vous reconditionnés ?">📊 Statistiques & impact</button>
+          <button class="chip-btn" data-question="Combien de personnes travaillent chez TechNova ?">👨‍💻 L'équipe de 8 personnes</button>
+        </div>
+      </div>
+      <div id="typingIndicator" class="typing-indicator hidden">
+        <span></span><span></span><span></span>
+        <small>NovaBot rédige une réponse...</small>
+      </div>
+      <form id="chatForm" class="chat-form">
+        <input type="text" id="chatInput" class="chat-input" placeholder="Posez une question sur TechNova..." required>
+        <button type="submit" id="chatSendBtn" class="chat-send-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>

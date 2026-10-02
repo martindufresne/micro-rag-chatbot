@@ -59,9 +59,14 @@ micro-rag-chatbot/
 ├── server.js             # Serveur backend Node.js, proxy API et moteur RAG
 ├── README.md             # Documentation complète du projet
 ├── data/
-│   └── faq.json          # Base de connaissances du site (Source de vérité RAG)
+│   ├── site-content.json # Base de connaissances RAG complète (toutes les pages)
+│   └── faq.json          # FAQ ciblée et politiques (taxes TPS/TVQ, livraisons)
 ├── public/
-│   ├── index.html        # Site vitrine démo + widget de discussion
+│   ├── index.html        # Page d'accueil & actualités
+│   ├── produits.html     # Catalogue des ordinateurs, écrans et accessoires
+│   ├── services.html     # Services d'atelier et réparations à Montréal
+│   ├── a-propos.html     # Histoire de l'entreprise, mission et équipe
+│   ├── contact.html      # Coordonnées, succursale rue Sainte-Catherine
 │   ├── style.css         # Styles CSS du site et du chatbot flottant
 │   └── app.js            # Logique frontend (DOM, fetch, markdown, historique)
 └── docs/

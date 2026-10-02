@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Succursale • TechNova Shop (Montréal)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- EN-TÊTE -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">TechNova<strong>Shop</strong></span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="produits.html">Produits</a>
+        <a href="services.html">Services & Atelier</a>
+        <a href="a-propos.html">À Propos</a>
+        <a href="contact.html" class="active btn-primary-sm">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- EN-TÊTE DE PAGE -->
+  <div class="page-header">
+    <div class="container">
+      <span class="badge-tag">Nous Joindre & Nous Visiter</span>
+      <h1>Contactez Notre Équipe Montréalaise</h1>
+      <p>Passez nous voir en succursale au centre-ville ou communiquez avec nous par téléphone et courriel du lundi au vendredi.</p>
+    </div>
+  </div>
+
+  <!-- CONTENU CONTACT -->
+  <main class="container">
+    <div class="contact-grid">
+      
+      <!-- Colonne Coordonnées -->
+      <div>
+        <div class="info-card">
+          <h3 style="margin-bottom: 20px;">Coordonnées Officielles</h3>
+
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div class="info-details">
+              <h4>Succursale & Comptoir de Cueillette</h4>
+              <p>1250, rue Sainte-Catherine Ouest<br>Montréal (Québec) H3G 1P1</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">🚇</span>
+            <div class="info-details">
+              <h4>Transport en Commun (STM)</h4>
+              <p>Métro Peel ou Guy-Concordia (Ligne Verte)<br>Lignes d'autobus 15, 24, 150</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div class="info-details">
+              <h4>Téléphone</h4>
+              <p>Local : (514) 895-2000<br>Ligne sans frais : 1 800 555-0199</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">✉️</span>
+            <div class="info-details">
+              <h4>Courriels</h4>
+              <p>Soutien client : support@technova-shop.ca<br>Ventes & Partenariats : ventes@technova-shop.ca</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <span class="info-icon">🕒</span>
+            <div class="info-details">
+              <h4>Horaires d'Ouverture (HNE)</h4>
+              <p>Lundi au vendredi : 9h00 à 17h00<br>Samedi (atelier seulement) : 10h00 à 16h00<br>Dimanche : Fermé</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Colonne Formulaire -->
+      <div>
+        <div class="info-card">
+          <h3 style="margin-bottom: 12px;">Envoyer un Message</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+            Pour une réponse instantanée 24/7 sur nos politiques et inventaires, utilisez notre assistant <strong>NovaBot</strong> en bas à droite !
+          </p>
+
+          <form onsubmit="event.preventDefault(); alert('Message de test simulé ! Dans ce cours, le chatbot gère les interactions en direct.');">
+            <div style="margin-bottom: 14px;">
+              <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:4px;">Nom complet</label>
+              <input type="text" class="chat-input" style="width: 100%;" placeholder="Votre nom" required>
+            </div>
+            <div style="margin-bottom: 14px;">
+              <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:4px;">Courriel</label>
+              <input type="email" class="chat-input" style="width: 100%;" placeholder="votre.courriel@exemple.ca" required>
+            </div>
+            <div style="margin-bottom: 18px;">
+              <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:4px;">Votre message</label>
+              <textarea class="chat-input" style="width: 100%; height: 100px; resize: vertical;" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%;">Envoyer le message</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- PIED DE PAGE -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 TechNova Solutions • Projet pédagogique Développeur Web (Québec).</p>
+      <p>Modèle : Google Gemini Flash • Gratuit & sans carte de crédit.</p>
+    </div>
+  </footer>
+
+  <!-- WIDGET DU CHATBOT -->
+  <aside id="chatWidget" class="chat-widget" aria-label="Assistant d'assistance virtuelle">
+    <button id="chatToggleBtn" class="chat-toggle-btn" aria-label="Ouvrir le chat d'assistance" title="Besoin d'aide ?">
+      <span class="icon-open">💬</span>
+      <span class="icon-close">✕</span>
+      <span class="notification-badge" id="chatBadge">1</span>
+    </button>
+    <div id="chatWindow" class="chat-window closed" role="dialog" aria-modal="false">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="avatar-wrap">
+            <span class="avatar-icon">🤖</span>
+            <span class="status-indicator online"></span>
+          </div>
+          <div>
+            <h3>NovaBot</h3>
+            <span class="chat-subtitle">Assistant officiel TechNova</span>
+          </div>
+        </div>
+        <button id="chatCloseBtn" class="chat-close-btn">✕</button>
+      </div>
+      <div id="chatMessages" class="chat-messages" role="log">
+        <div class="message bot">
+          <div class="message-bubble">
+            Bonjour ! 👋 Besoin de nos coordonnées, de notre adresse à Montréal ou de nos horaires ? Demandez-moi !
+          </div>
+          <span class="message-time">À l'instant</span>
+        </div>
+      </div>
+      <div class="quick-questions" id="quickQuestions">
+        <span class="quick-title">Questions fréquentes contact :</span>
+        <div class="chips-container">
+          <button class="chip-btn" data-question="Quelle est la station de métro la plus proche de votre boutique ?">🚇 Métro Peel / Guy</button>
+          <button class="chip-btn" data-question="Quels sont vos horaires le samedi ?">🕒 Horaires samedi</button>
+          <button class="chip-btn" data-question="Quel est le numéro sans frais pour vous appeler ?">📞 Ligne 1-800</button>
+          <button class="chip-btn" data-question="Où peut-on se stationner près de la succursale ?">🚗 Stationnement</button>
+        </div>
+      </div>
+      <div id="typingIndicator" class="typing-indicator hidden">
+        <span></span><span></span><span></span>
+        <small>NovaBot rédige une réponse...</small>
+      </div>
+      <form id="chatForm" class="chat-form">
+        <input type="text" id="chatInput" class="chat-input" placeholder="Posez une question sur nos coordonnées..." required>
+        <button type="submit" id="chatSendBtn" class="chat-send-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>

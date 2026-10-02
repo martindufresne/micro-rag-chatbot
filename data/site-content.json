@@ -1,0 +1,162 @@
+{
+  "site": {
+    "nom": "TechNova Shop",
+    "description": "Boutique d'informatique écoresponsable, vente d'appareils reconditionnés certifiés et atelier de réparation à Montréal (Québec).",
+    "adresse": "1250, rue Sainte-Catherine Ouest, Montréal (Québec) H3G 1P1",
+    "metro": "Station Peel ou Guy-Concordia (Ligne Verte)",
+    "telephone": "(514) 895-2000",
+    "sans_frais": "1 800 555-0199",
+    "courriel": "support@technova-shop.ca",
+    "heures_ouverture": "Lundi au vendredi : 9h00 à 17h00 (HNE / Montréal). Samedi : 10h00 à 16h00 (atelier seulement). Dimanche : Fermé."
+  },
+  "pages": [
+    {
+      "url": "/",
+      "titre": "Page d'accueil & Actualités",
+      "description": "Portail d'accueil de TechNova avec les offres du mois et la présentation de nos engagements.",
+      "sections": [
+        {
+          "titre": "Rabais pour étudiants et enseignants",
+          "details": "Tous les étudiants de cégep (DEC/AEC) et d'université au Québec bénéficient d'un rabais exclusif de 10 % sur tous les ordinateurs portables et accessoires sur présentation d'une carte étudiante valide ou avec une adresse courriel scolaire (.qc.ca, .ca)."
+        },
+        {
+          "titre": "Programme de cueillette en 2h à Montréal",
+          "details": "Achetez en ligne et venez récupérer votre commande sans frais de livraison en moins de 2 heures à notre succursale de la rue Sainte-Catherine."
+        },
+        {
+          "titre": "Éco-responsabilité québécoise",
+          "details": "100 % de nos ordinateurs sont reconditionnés et testés à Montréal selon un protocole strict de 40 points de contrôle. Nous offrons une alternative durable au neuf pour réduire l'empreinte carbone technologique."
+        }
+      ]
+    },
+    {
+      "url": "/produits.html",
+      "titre": "Catalogue des Produits",
+      "description": "Liste de nos ordinateurs, écrans et périphériques reconditionnés certifiés avec fiches techniques.",
+      "articles": [
+        {
+          "nom": "NovaBook Pro 15",
+          "categorie": "Ordinateur portable",
+          "prix": "799,99 $ CA",
+          "etat": "Reconditionné certifié - Grade A (comme neuf)",
+          "specs": "Écran 15,6 pouces FHD IPS, processeur Intel Core i7 8 cœurs, 16 Go de mémoire RAM DDR4, disque SSD NVMe de 512 Go, clavier bilingue rétroéclairé (français Canada / US). Autonomie de 9h. Idéal pour le développement web, la programmation et les études collégiales/universitaires.",
+          "garantie": "Garantie complète de 1 an pièces et main-d'œuvre incluse sans frais supplémentaires."
+        },
+        {
+          "nom": "NovaBook Air 13",
+          "categorie": "Ordinateur portable ultraportable",
+          "prix": "549,99 $ CA",
+          "etat": "Reconditionné certifié - Grade A",
+          "specs": "Écran 13,3 pouces Retina, processeur quad-core ultra-basse consommation, 8 Go de RAM, disque SSD 256 Go, poids plume de 1,2 kg. Parfait pour la bureautique mobile et les cours.",
+          "garantie": "Garantie de 1 an incluse."
+        },
+        {
+          "nom": "Moniteur NovaView 27\" 4K",
+          "categorie": "Écran & Moniteur",
+          "prix": "349,99 $ CA",
+          "etat": "Neuf sous emballage scellé",
+          "specs": "Dalle IPS 4K Ultra HD (3840 x 2160), 60 Hz, 99% sRGB, port USB-C avec Power Delivery 65W (charge votre portable avec un seul câble), 2x HDMI 2.0, DisplayPort 1.4. Pied ajustable en hauteur et rotation portrait 90 degrés.",
+          "garantie": "Garantie fabricant de 3 ans."
+        },
+        {
+          "nom": "Clavier Mécanique NovaKey Pro",
+          "categorie": "Accessoires & Périphériques",
+          "prix": "129,99 $ CA",
+          "etat": "Neuf",
+          "specs": "Disposition bilingue français (Canada) avec accents 'É, À, Ç', commutateurs mécaniques silencieux Red, rétroéclairage blanc doux ajustable, connexion sans fil Bluetooth 5.2 ou filaire USB-C. Batterie rechargeable 4000 mAh (autonomie 3 mois).",
+          "garantie": "Garantie de 2 ans."
+        },
+        {
+          "nom": "Souris Ergonomique NovaGrip",
+          "categorie": "Accessoires & Périphériques",
+          "prix": "59,99 $ CA",
+          "etat": "Neuf",
+          "specs": "Angle vertical de 57 degrés réduisant la fatigue du poignet et les risques de tunnel carpien, capteur optique 4000 DPI, clics silencieux, compatible Mac, Windows et Linux.",
+          "garantie": "Garantie de 2 ans."
+        }
+      ]
+    },
+    {
+      "url": "/services.html",
+      "titre": "Services d'Atelier & Réparations",
+      "description": "Atelier de réparation informatique, entretien préventif et récupération écologique.",
+      "services": [
+        {
+          "nom": "Diagnostic complet d'ordinateur (PC et Mac)",
+          "tarif": "GRATUIT (sans obligation de réparation)",
+          "delai": "24 à 48 heures ouvrables",
+          "details": "Nos techniciens inspectent le matériel, le disque, la mémoire, le système de ventilation et le système d'exploitation pour identifier avec certitude l'origine de la panne avant de vous soumettre un devis clair."
+        },
+        {
+          "nom": "Remplacement d'écran et de batterie de portable",
+          "tarif": "À partir de 89,99 $ CA (pièces et main-d'œuvre comprises)",
+          "delai": "Généralement réalisé le jour même si les pièces sont en stock",
+          "details": "Écrans d'origine haute définition et batteries certifiées avec garantie de 6 mois."
+        },
+        {
+          "nom": "Nettoyage physique interne et changement de pâte thermique",
+          "tarif": "49,99 $ CA",
+          "delai": "Sous 2 heures à l'atelier",
+          "details": "Élimination complète de la poussière dans les ventilateurs et application d'une pâte thermique de qualité supérieure (Arctic MX-4) pour faire baisser les températures de 10 à 20°C et prolonger la vie de votre appareil."
+        },
+        {
+          "nom": "Programme de rachat et recyclage d'anciens appareils",
+          "tarif": "Crédit en magasin de 25 $ à 150 $ selon l'état de l'appareil",
+          "details": "Apportez vos vieux ordinateurs, écrans ou tablettes en succursale. Nous effaçons les données de façon sécurisée (norme DoD 5220.22-M) et vous offrons un crédit applicable sur n'importe quel produit de la boutique."
+        }
+      ]
+    },
+    {
+      "url": "/a-propos.html",
+      "titre": "À Propos de TechNova",
+      "description": "L'histoire de notre entreprise montréalaise, nos valeurs écoresponsables et notre équipe.",
+      "contenu": {
+        "fondation": "TechNova a été fondée en 2021 à Montréal par Martin et Sophie, deux anciens étudiants en informatique du Collège de Maisonneuve et de l'UQAM, révoltés par l'obsolescence programmée et le gaspillage d'équipements technologiques encore parfaitement fonctionnels.",
+        "mission": "Démocratiser l'accès à du matériel informatique fiable et abordable pour les étudiants et travailleurs autonomes québécois, tout en réduisant la pollution électronique au Québec.",
+        "statistiques": "Plus de 4 200 ordinateurs reconditionnés depuis nos débuts, 12 tonnes de déchets électroniques détournés des sites d'enfouissement québécois, et un taux de satisfaction client de 98 %.",
+        "equipe": "Une équipe de 8 techniciens certifiés et conseillers passionnés qui travaillent dans notre atelier du centre-ville de Montréal."
+      }
+    },
+    {
+      "url": "/contact.html",
+      "titre": "Contact & Emplacement de la Succursale",
+      "description": "Coordonnées complètes, carte d'accès et options pour nous rejoindre.",
+      "details": {
+        "succursale_principale": "1250, rue Sainte-Catherine Ouest, Montréal (Québec) H3G 1P1",
+        "acces_transport": "À 2 minutes à pied des stations de métro Peel et Guy-Concordia (Ligne Verte). Plusieurs lignes d'autobus STM (15, 24, 150).",
+        "stationnement": "Stationnement souterrain disponible au centre commercial voisin, ou places avec parcomètres rue Sainte-Catherine et rue Drummond.",
+        "courriel_support": "support@technova-shop.ca",
+        "courriel_ventes": "ventes@technova-shop.ca",
+        "telephone_local": "(514) 895-2000",
+        "ligne_sans_frais": "1 800 555-0199"
+      }
+    }
+  ],
+  "faq_et_politiques": [
+    {
+      "sujet": "Taxes applicables au Québec",
+      "question": "Comment fonctionnent les taxes sur vos produits et services ?",
+      "reponse": "Tous nos prix sont affichés hors taxes en dollars canadiens ($ CA). Les deux taxes légales s'appliquent pour les livraisons et achats au Québec : la TPS fédérale de 5 % et la TVQ provinciale de 9,975 % (taux combiné d'environ 14,975 %). Le détail des taxes est clairement affiché sur votre facture et lors du paiement."
+    },
+    {
+      "sujet": "Livraison et expédition",
+      "question": "Quels sont vos délais et frais de livraison au Québec et au Canada ?",
+      "reponse": "La livraison standard avec Postes Canada ou Purolator prend 2 à 4 jours ouvrables au Québec et coûte 6,99 $. Elle devient 100 % GRATUITE pour toute commande de 60 $ ou plus avant taxes. La livraison express 24h-48h est à 12,99 $."
+    },
+    {
+      "sujet": "Politique de retour",
+      "question": "Puis-je retourner un article et sous quel délai ?",
+      "reponse": "Vous avez 30 jours civils suivant la réception pour changer d'avis. Le produit doit être dans son emballage d'origine. Les retours sont sans frais si l'article est défectueux (étiquette prépayée fournie). Pour un simple changement d'avis, 5 $ de frais de retour sont déduits du remboursement."
+    },
+    {
+      "sujet": "Modes de paiement",
+      "question": "Quels modes de paiement acceptez-vous ?",
+      "reponse": "Nous acceptons les cartes de crédit (Visa, Mastercard, American Express), Débit Interac en ligne, Apple Pay, Google Pay et PayPal. Le paiement en 4 versements sans intérêt est offert avec Sezzle dès 50 $ d'achat."
+    },
+    {
+      "sujet": "Garantie légale québécoise",
+      "question": "Quelle garantie protège mes achats chez TechNova ?",
+      "reponse": "En plus de la garantie légale de conformité et de durabilité de la Loi sur la protection du consommateur du Québec, tous nos ordinateurs reconditionnés incluent une garantie pièces et main-d'œuvre de 1 an directement avec notre atelier montréalais."
+    }
+  ]
+}
